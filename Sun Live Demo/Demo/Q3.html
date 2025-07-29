@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Learning Journal – JavaScript</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fdfc;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #00796b;
+        }
+
+        .highlight {
+            color: #ff5722;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- ✅ Q3a: JavaScript placed in <head> section -->
+    <script>
+        // ✅ Q3b: Function displays a message when the page loads
+        window.onload = function() {
+            console.log("✅ Welcome to My Learning Journal – JavaScript has been loaded!");
+            alert("Hello! Thanks for visiting my Learning Journal 🚀");
+        };
+    </script>
+</head>
+<body>
+
+    <h1>JavaScript in My Learning Journal</h1>
+    <p>JavaScript adds interactivity to web pages. For example, this page displays an <span class="highlight">alert</span> message when it loads, and logs a message to the browser's <code>console</code>.</p>
+
+    <h2>What I’ve Learned About JavaScript</h2>
+    <ul>
+        <li><strong>Script Placement</strong>: Scripts can go in the <code>&lt;head&gt;</code> or before the end of <code>&lt;body&gt;</code>.</li>
+        <li><strong>Console Log</strong>: Useful for debugging or messages using <code>console.log()</code>.</li>
+        <li><strong>Alert</strong>: Pops up messages using <code>alert()</code>.</li>
+        <li><strong>Functions</strong>: Blocks of code that perform tasks and can be reused.</li>
+    </ul>
+
+    <h2>Example HTML5 Input Elements</h2>
+    <form>
+        <label for="color">Pick your favorite color:</label>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="range">Rate your JavaScript skills (1-10):</label>
+        <input type="range" id="range" name="range" min="1" max="10"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

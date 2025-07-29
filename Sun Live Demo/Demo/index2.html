@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ✅ Meta tags for mobile responsiveness and page description -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FSAI Module 3 Learning Journal – covering HTML, CSS, DOM, and JavaScript.">
+
+    <!-- ✅ Title reflecting content of the webpage -->
+    <title>FSAI Module 3 Learning Journal</title>
+
+    <!-- ✅ Internal CSS Styling -->
+    <style>
+        body {
+            background-color: #f2fbff;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #0077b6;
+        }
+
+        a {
+            color: #1565c0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        .highlight {
+            color: #d62828;
+            font-weight: bold;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+
+    <!-- ✅ JavaScript in head section -->
+    <script>
+        window.onload = function() {
+            console.log("✅ JavaScript loaded – Welcome to FSAI Module 3 Learning Journal!");
+            alert("Welcome to my FSAI Module 3 Learning Journal 🚀");
+        };
+    </script>
+</head>
+<body>
+
+    <h1>FSAI Module 3 Learning Journal – HTML, CSS, DOM & JavaScript</h1>
+
+    <p>This learning journal documents my progress in HTML structure, styling with CSS, using tags and attributes, and adding interactivity with JavaScript.</p>
+
+    <p>For deeper insights, I often refer to 
+        <a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank"><br>MDN Web Docs<br></a>.
+    </p>
+
+    <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Learning Inspiration - Girl Coding">
+
+    <h2>HTML Tags I Practiced</h2>
+    <ul>
+        <li><code>&lt;p&gt;</code> – Paragraph</li>
+        <li><code>&lt;a&gt;</code> – Hyperlink</li>
+        <li><code>&lt;img&gt;</code> – Image</li>
+        <li><code>&lt;ul&gt;</code> / <code>&lt;ol&gt;</code> – Lists</li>
+        <li><code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code> – Semantic Elements</li>
+    </ul>
+
+    <h2>Steps to Build a Web Page</h2>
+    <ol>
+        <li>Use <code>&lt;!DOCTYPE html&gt;</code> for HTML5</li>
+        <li>Structure with <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code></li>
+        <li>Add text, images, links, and lists</li>
+        <li>Style using CSS</li>
+        <li>Enhance with JavaScript</li>
+    </ol>
+
+    <h2>Helpful Video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/kUMe1FH4CHE"
+        title="Intro to HTML & CSS" frameborder="0" allowfullscreen></iframe>
+
+    <h2>HTML5 Input Elements</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com"><br><br>
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="range">Rate Your JS Skills (1–10):</label>
+        <input type="range" id="range" name="range" min="1" max="10"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>JavaScript in Action</h2>
+    <p>When this page loads, a <span class="highlight">JavaScript alert</span> appears and a message logs to the browser console:</p>
+
+    <pre><code>window.onload = function() {
+    alert("Welcome!");
+    console.log("JavaScript Loaded");
+};</code></pre>
+
+    <footer>
+        <p>&copy; 2025 FSAI Module 3 Learning Journal. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
