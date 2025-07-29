@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0040)https://stanford.edu/group/csp/cs22/api/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Using an API</title>
+</head>
+
+<body>
+<h1>Using an API (with OpenWeatherMap.org as an example)</h1>
+<p>If the organization providing the API requires it, you will  need to sign up as an authorized user to gain access to the API.<br>
+  For this tutorial, we will be using OpenWeatherMap.org’s API  to display current weather information.</p>
+<ul>
+  <li>Visit <a href="http://openweathermap.org/appid">http://openweathermap.org/appid</a> and  click <strong>Sign Up</strong>.<br>
+  <img src="./Using an API_files/clip_image003.jpg" alt="" width="108" height="99" border="0"></li>
+  <li>Create a new account by entering the desired  information, and then click <strong>Create  Account</strong>.<br>
+    <img src="./Using an API_files/clip_image005.jpg" alt="" width="141" height="97" border="0"></li>
+  <li>Click <strong>API  Keys</strong> to view your existing keys, as well as to generate new ones (if  needed).</li>
+</ul>
+<p><img src="./Using an API_files/clip_image007.jpg" alt="" width="310" height="133" border="0"><br>
+  Now that we have a valid API key, we can use it to create  the application to display current weather information.<br>
+  To display the current weather, we use the variable q with  the city in which we wish the current weather data. For this example, we’ll use  Palo Alto:<br>
+  <a href="http://api.openweathermap.org/data/2.5/find?q=Palo+Alto&amp;units=imperial&amp;type=accurate&amp;mode=xml&amp;APPID=api-key">http://api.openweathermap.org/data/2.5/find?q=Palo+Alto&amp;units=imperial&amp;type=accurate&amp;mode=xml&amp;APPID=api-key</a><br>
+  Accessing this using a web browser displays the following:<br>
+  <img src="./Using an API_files/clip_image009.jpg" alt="" width="401" height="289" border="0"></p>
+<p>To use this information in an application, we’ll need to  extract this data using PHP and output it to the screen. <br>
+  In this example:</p>
+<ul>
+  <li><strong>$url</strong> is the link to the data</li>
+  <li><strong>$getweather</strong> obtains the data</li>
+  <li><strong>$gethumidity</strong> extracts only the humidity value from the data</li>
+  <li><strong>$gettemp </strong>extracts  only the temperature from the data</li>
+</ul>
+<p>The <strong>echo</strong> statements display the temperature and humidity.<br>
+  <img src="./Using an API_files/clip_image011.jpg" alt="" width="640" height="217" border="0"></p>
+<p>And here is the resultant webpage (browser view and code  view):<br>
+  <img src="./Using an API_files/clip_image013.jpg" alt="" width="296" height="229" border="0">&nbsp;&nbsp;&nbsp;&nbsp; <img src="./Using an API_files/clip_image015.jpg" alt="" width="291" height="228" border="0"></p>
+
+
+</body></html>

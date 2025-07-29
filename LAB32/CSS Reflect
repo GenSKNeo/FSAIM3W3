@@ -1,0 +1,18 @@
+Reflection Questions
+
+    How to convert to external stylesheets?
+        Create a new .css file
+        Move all CSS rules from <style> tags to this file
+        Link the CSS file in HTML using <link rel="stylesheet" href="filename.css">
+        Remove the <style> tags from HTML
+
+    When to use each method?
+        Inline: Quick testing, single-element styling, CMS systems with limited access
+        Internal: Small projects, single-page applications, when styles won’t be reused
+        External: Most professional projects, multi-page websites, when maintainability matters
+
+    Best practices:
+        Prefer external stylesheets for most professional work
+        Use internal stylesheets for small, single-page projects
+        Limit inline styles to special cases where other methods aren’t practical
+        Keep CSS organized with comments and logical grouping

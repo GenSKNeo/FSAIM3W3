@@ -1,0 +1,29 @@
+📌 Day 2: HTML Tables, Divs & Comments
+1. Tables
+
+<table border="1">
+    <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+    </tr>
+    <tr>
+        <td>Row 1, Cell 1</td>
+        <td>Row 1, Cell 2</td>
+    </tr>
+</table>
+
+Key Attributes:
+
+    colspan: Merges columns.
+    rowspan: Merges rows.
+
+2. Divs & Spans (Layout Control)
+
+<div style="background: lightblue;"> 
+    <p>Block-level container</p>
+</div>
+<span style="color: red;">Inline container</span>
+
+3. HTML Comments
+
+<!-- This is a comment (hidden in browser) -->

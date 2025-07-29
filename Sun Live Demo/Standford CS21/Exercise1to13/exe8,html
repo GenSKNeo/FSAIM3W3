@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>STUDENT'S Home Page</title>
+  <link rel="stylesheet" type="text/css" href="style3.css">
+</head>
+<body>
+
+  <header>
+    <h1>STUDENT</h1>
+
+    <h2>About Me</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula tincidunt nunc eget varius.
+    </p>
+
+    <h2>About This Site</h2>
+    <p>
+      Welcome to my in-class home page! As is the case with many webpages, mine is still 
+      <em>under construction</em>!
+    </p>
+
+    <p>
+      I created this page in a 
+      <a href="http://csp.stanford.edu/" target="_blank">
+        <img src="images/cs.gif" alt="[logo] Continuing Studies" style="vertical-align: middle;">
+        Continuing Studies
+      </a> class at 
+      <a href="http://www.stanford.edu/" target="_blank">Stanford University</a>.
+    </p>
+
+    <div class="promote">
+      <img src="images/su.gif" alt="[logo] Stanford University">
+    </div>
+  </header>
+
+  <main>
+    <p>
+      The website for my class is 
+      <a href="http://web.stanford.edu/group/csp/cs21/" target="_blank">
+        http://web.stanford.edu/group/csp/cs21/
+      </a>.
+    </p>
+  </main>
+
+  <footer>
+    <address>
+      Last Updated: TODAY'S DATE<br>
+      Copyright &copy; 2016, STUDENT
+    </address>
+  </footer>
+
+</body>
+</html>

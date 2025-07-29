@@ -1,0 +1,46 @@
+/* Element selector */
+h1 {
+  color: blue;
+}
+
+/* Class selector */
+.highlight {
+  background: yellow;
+}
+
+/* ID selector */
+#main-title {
+  font-size: 2rem;
+}
+
+/* Descendant */
+article p {
+  font-style: italic;
+}
+
+/* Child */
+nav > ul {
+  list-style: none;
+}
+
+/* Adjacent Sibling */
+h2 + p {
+  margin-top: 0;
+}
+
+/* Hover effect */
+button:hover {
+  background: black;
+  color: white;
+}
+
+/* Zebra-striped list */
+li:nth-child(even) {
+  background: #f0f0f0;
+}
+
+/* Add an arrow before paragraphs */
+p::before {
+  content: "→ ";
+  color: red;
+}

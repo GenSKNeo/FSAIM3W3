@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://www.opinionatedgeek.com/codecs/base64encoder -->
+<html class=" js svg"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Base 64 Encoder (100% client-side) :: OpinionatedGeek</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" href="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/bootstrap.css">
+<link rel="stylesheet" href="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/all.css">
+<link rel="stylesheet" href="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/bootstrap-tagsinput.css">
+
+
+    <link rel="stylesheet" href="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/medium-editor.min.css">
+    <link rel="stylesheet" href="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/default.min.css">
+    <link rel="stylesheet" href="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/medium-editor-tables.min.css">
+    <link rel="stylesheet" href="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/opinionatedgeek.min.css">
+
+
+<!--[if lt IE 9]>
+    <script src="~/lib/html5shiv/html5shiv.min.js"></script>
+<![endif]-->
+
+<script src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/modernizr.custom.32229-2.8-respondjs-1-4-2.js.download"></script>
+
+
+        
+        
+            <script src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/codeccompatibilitytest.js.download"></script>
+            <script src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/codecs.min.js.download"></script>
+        
+    </head>
+    <body>
+        <div class="entire-menu">
+    <input id="bmenu_toggle" type="checkbox" name="bmenu-open" class="hidden">
+    <label class="bmenu toggle animated fadeInDown" for="bmenu_toggle" accesskey="1">
+        <header>
+            <span class="heavy">☰</span>
+        </header>
+    </label>
+    <div class="hide-at-start-wrapper">
+        <nav class="bmenu panel animated">
+            <a class="no-panel" href="https://www.opinionatedgeek.com/"><i class="fas fa-home"></i> Home</a>
+            <a class="no-panel" asp-snaplet="Blog" href="https://www.opinionatedgeek.com/Blog"><i class="fas fa-blog"></i> Blog</a>
+            <a class="no-panel" href="https://www.opinionatedgeek.com/Home/Me"><i class="fas fa-user"></i> Geoff Taylor</a>
+            <a class="no-panel" href="https://www.opinionatedgeek.com/Home/About"><i class="fas fa-anchor"></i> OpinionatedGeek Ltd.</a>
+            <a class="no-panel" href="https://www.opinionatedgeek.com/Home/Contact"><i class="fas fa-paper-plane"></i> Contact</a>
+            <hr>
+            <a href="https://www.opinionatedgeek.com/codecs/base64encoder#"><i class="fas fa-file"></i> Encoders</a>
+            <a href="https://www.opinionatedgeek.com/codecs/base64encoder#"><i class="fas fa-file"></i> Decoders</a>
+            <hr>
+            <a class="no-panel" href="https://mastodon.social/@OpinionatedGeek"><i class="fab fa-mastodon"></i> Me On Mastodon</a>
+            <a class="no-panel" href="https://twitter.com/OpinionatedGeek"><i class="fab fa-twitter"></i> Me On Twitter</a>
+            <hr>
+            <article class="panel empty"></article>
+            <article class="panel empty"></article>
+            <article class="panel empty"></article>
+            <article class="panel empty"></article>
+            <article class="panel empty"></article>
+            <article class="panel">
+                <div class="column">
+                    <section class="titled-group">
+                        <header>Encoders</header>
+                        <a href="https://www.opinionatedgeek.com/Codecs/Base64Encoder"><i class="fas fa-file"></i> Base64 Encoder</a>
+                        <a href="https://www.opinionatedgeek.com/Codecs/HtmlEncoder"><i class="fas fa-file"></i> HTML Encoder</a>
+                        <a href="https://www.opinionatedgeek.com/Codecs/UrlEncoder"><i class="fas fa-file"></i> URL Encoder</a>
+                    </section>
+                </div>
+            </article>
+            <article class="panel">
+                <div class="column">
+                    <section class="titled-group">
+                        <header>Decoders</header>
+                        <a href="https://www.opinionatedgeek.com/Codecs/Base64Decoder"><i class="fas fa-file"></i> Base64 Decoder</a>
+                        <a href="https://www.opinionatedgeek.com/Codecs/HtmlDecoder"><i class="fas fa-file"></i> HTML Decoder</a>
+                        <a href="https://www.opinionatedgeek.com/Codecs/UrlDecoder"><i class="fas fa-file"></i> URL Decoder</a>
+                    </section>
+                </div>
+            </article>
+            <article class="panel empty"></article>
+        </nav>
+    </div>
+</div>
+
+        <header class="hero-image" role="banner" style="background-image: url(/img/hero/arthurspass.jpg);">
+
+</header>
+
+
+        <main class="container">
+            <div class="row">
+                <div class="col-md-10 col-sm-12 col-md-offset-1 main-content">
+                    
+<script type="text/javascript">
+    function fetchEncoder() {
+        let encoder;
+        if ($('#useSimplifiedEncoding').is(':checked')) {
+            encoder = new SimplifiedBase64Encoder();
+        } else {
+            encoder = new FullBase64Encoder();
+        }
+
+        if ($('#makeUrlSafe').is(':checked')) {
+            encoder = new MakeUrlSafeTransformer(encoder);
+        }
+
+        return encoder;
+    }
+
+    function fetchOutput() {
+        let fileOutput;
+        if ($('#generateDownloadLink').is(':checked')) {
+            fileOutput = new FileOutput('#fileOutputContainer', '#filenameField', '#fileOutputLink');
+        } else {
+            fileOutput = new InactiveFileOutput('#fileOutputContainer', '#filenameField', '#fileOutputLink');
+        }
+
+        let htmlOutput;
+        if ($('#generateTextRendition').is(':checked')) {
+            htmlOutput = new HtmlOutput('#htmlOutput', '#htmlOutput');
+        } else {
+            htmlOutput = new InactiveHtmlOutput('#htmlOutput', '#htmlOutput');
+        }
+
+        const container = new ContainerVisibilityOutput('#textOutputPanel')
+        const output = new CompoundOutput(container, htmlOutput, fileOutput);
+
+        return output;
+    }
+
+    function encode() {
+        const fileInputElement = $('#fileToEncode').get(0);
+        const fileInput = new BinaryFileInput(fileInputElement)
+        const htmlInput = new HtmlInput('#toEncode');
+        const input = new OneOrOtherInput(fileInput, htmlInput, function() { return fileInputElement.files.length == 1})
+
+        const encoder = fetchEncoder();
+
+        const output = fetchOutput();
+
+        const action = new Action(input, encoder, output);
+        action.act();
+    }
+</script>
+
+<h1 class="header-bar">Base64 Encoder</h1>
+
+<div>
+    <p>
+        Encode text or a binary file as <a href="https://en.wikipedia.org/wiki/Base64">base64</a>-encoded
+        text, using just your browser. View the encoded value or download it as a file. (You can use our
+        <a href="https://www.opinionatedgeek.com/Codecs/Base64Decoder">client-side base64 decoder</a>
+        to try it out!)
+    </p>
+    <div class="panel panel-info callout">
+	<div class="panel-heading">Privacy and Confidentiality</div>
+	<div class="panel-body">
+		This encoder runs entirely in the browser—it does not send any data to
+		any opinionatedgeek.com server for encoding. <a href="https://www.opinionatedgeek.com/Blog/2016/11/6/new-client-side-encoders">Learn more</a>.
+	</div>
+</div>
+
+    <details class="panel panel-info callout no-float">
+        <summary class="panel-heading" title="Click to expand for details of base64 encoding">What is Base 64 Encoding?</summary>
+        <div class="panel-body">
+            <p>
+                Base64 is a way of representing binary data in an ASCII string.
+            </p>
+            <p>
+                ‘Base64 encoding’ is the process of transforming binary or text data
+                into its base64 representation, a string of odd-looking text.
+            </p>
+            <p>
+                <a href="https://en.wikipedia.org/">Wikipedia</a> has a good expalanation of
+                <a href="https://en.wikipedia.org/wiki/Base64">what base64 encoding and decoding</a>
+                involves.
+            </p>
+        </div>
+    </details>
+    <p>
+        Load the data to base64–encode from a file, then press the ‘Encode’ button:
+        </p><div class="btn btn-default btn-file">
+            Browse:
+            <input type="file" id="fileToEncode" name="fileToEncode" onchange="$(&quot;#uploadFileInfo&quot;).html($(this).val().replace(/^.*\\/, &quot;&quot;))">
+            <span class="label label-info" id="uploadFileInfo"></span>
+        </div>
+    <p></p>
+    <p>
+        Alternatively, type or paste in the text you want to base64–encode, then press the
+        ‘Encode’ button.
+    </p>
+    <textarea id="toEncode" class="codec-input"></textarea>
+    <div>
+        <input type="checkbox" id="generateTextRendition" checked="checked"><label for="generateDownloadLink">Automatically generate text rendition</label>
+    </div>
+    <div>
+        <input type="checkbox" id="generateDownloadLink" checked="checked"><label for="generateDownloadLink">Automatically generate download link (not good for large files)</label>
+    </div>
+    <div>
+        <input type="checkbox" id="makeUrlSafe"><label for="makeUrlSafe">Use URL-safe base64</label>
+    </div>
+    <div>
+        <input type="checkbox" id="useSimplifiedEncoding"><label for="useSimplifiedEncoding">Use simplified (faster) encoder</label>
+    </div>
+    <p>
+        <button onclick="return encode()">Encode</button>
+    </p>
+</div>
+
+<div id="textOutputPanel" style="">
+    <h2 class="header-bar">Encode Result</h2>
+    <textarea id="htmlOutput" class="codec-output">SEk=</textarea>
+    <p id="fileOutputContainer" style="">
+        <a href="data:application/octet-stream;charset=utf-16le;base64,U0VrPQ==" id="fileOutputLink" download="Base64Encoded.txt">Click here to download encoded file</a>
+        as:
+        <input type="text" id="filenameField" value="Base64Encoded.txt" title="This name will be used as the default filename when you download.">
+    </p>
+</div>
+
+<script type="application/ld+json"> 
+{
+  "@context": "http://www.schema.org",
+  "@type": "WebApplication",
+  "name": "Base64 Encoder (100% Client-Side)",
+  "browserRequirements": "Requires HTML5 support",
+  "applicationCategory": "Encoder/Decoder",
+  "applicationSuite": "OpinionatedGeek Codecs",
+  "softwareVersion": "1.0",
+  "about": "Base64 Encoder",
+  "creator": {
+    "@type": "Person",
+    "@id": "https://www.opinionatedgeek.com/Home/Me"
+  },
+  "dateCreated": "2016-11-06",
+  "dateModified": "2016-11-16",
+  "datePublished": "2016-11-06",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "0",
+    "priceCurrency": "USD"
+  },
+  "keywords": "base64, encode, decode, encoder, decoder, codec, client-side",
+  "featureList": "Provides in-browser encoding of base64 data",
+  "description": "An entirely browser-based base64 encoder that can encode files or input text without sending to a server."
+}
+ </script>
+                </div>
+            </div>
+        </main>
+
+        <footer class="single">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-2">
+                        <img src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/profile-geoff.jpg" class="user-icon " alt="user-image">
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="category-list">
+                            <p>Client-side only encoding and decoding</p>
+                            <p>by <a rel="author" href="https://www.opinionatedgeek.com/Home/Me">Geoff Taylor</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="social">
+                            <p>Share this page</p>
+                            <div class="social-links">
+                                <a class="social-icon" href="https://www.opinionatedgeek.com/codecs/base64encoder#" data-platform="twitter" data-message="Base 64 Encoder (100% client-side)" data-url="http://www.opinionatedgeek.com/codecs/base64encoder"><i class="fa fa-twitter"></i></a>
+                                <a class="social-icon" href="https://www.opinionatedgeek.com/codecs/base64encoder#" data-platform="facebook" data-message="Base 64 Encoder (100% client-side)" data-url="http://www.opinionatedgeek.com/codecs/base64encoder"><i class="fa fa-facebook-official"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row read-another-section">
+                <a href="https://www.opinionatedgeek.com/Codecs/Base64Encoder"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+                    <div class="overlay"></div>
+                    <img src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/footer-pearson.jpg">
+                    <h3 class="read-another">Base64 Encoder</h3>
+                </div></a>
+                <a href="https://www.opinionatedgeek.com/Codecs/Base64Decoder"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+                    <div class="overlay"></div>
+                    <img src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/footer-carrickfergus.jpg">
+                    <h3 class="read-another">Base64 Decoder</h3>
+                </div></a>
+                <a href="https://www.opinionatedgeek.com/Codecs/HtmlEncoder"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+                    <div class="overlay"></div>
+                    <img src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/footer-clouds.jpg">
+                    <h3 class="read-another">HTML Encoder</h3>
+                </div></a>
+                <a href="https://www.opinionatedgeek.com/Codecs/HtmlDecoder"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+                    <div class="overlay"></div>
+                    <img src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/footer-waimakariri.jpg">
+                    <h3 class="read-another">HTML Decoder</h3>
+                </div></a>
+                <a href="https://www.opinionatedgeek.com/Codecs/UrlEncoder"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+                    <div class="overlay"></div>
+                    <img src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/footer-sunset.jpg">
+                    <h3 class="read-another">URL Encoder</h3>
+                </div></a>
+                <a href="https://www.opinionatedgeek.com/Codecs/UrlDecoder"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+                    <div class="overlay"></div>
+                    <img src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/footer-beach.jpg">
+                    <h3 class="read-another">URL Decoder</h3>
+                </div></a>
+            </div>
+        </footer>
+
+        <script src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/jquery.min.js.download"></script>
+<script src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/bootstrap.min.js.download"></script>
+<script src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/jquery.validate.min.js.download"></script>
+<script src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/typeahead.bundle.min.js.download"></script>
+<script src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/fastclick.js.download"></script>
+<script src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/bootstrap-tagsinput.js.download"></script>
+<script src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/medium-editor.min.js.download"></script>
+<script src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/medium-editor-tables.min.js.download"></script>
+<script src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/autolist.js.download"></script>
+
+
+    <script src="./Base 64 Encoder (100% client-side) __ OpinionatedGeek_files/opinionatedgeek.min.js.download"></script>
+
+        
+    
+
+</body></html>

@@ -1,0 +1,25 @@
+  p { color: greenyellow; }
+
+  /* Class selector */
+.highlight {
+  color: green;
+  background: yellow;
+  padding: 10px;
+}
+
+/* Element Selector */
+h3 { color: blue; }
+
+/* Class Selector */
+.red { color: red; }
+<p class="red">Text</p>
+
+/* ID Selector */
+#mainTitle { font-size: 50px; }
+<h1 id="mainTitle">Welcome</h1>
+
+/* Grouped Selectors */
+p, div { font-weight: bold; }
+
+/* Universal */
+* { margin: 0; padding: 0; }

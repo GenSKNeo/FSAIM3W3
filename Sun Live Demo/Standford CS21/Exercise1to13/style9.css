@@ -1,0 +1,119 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Structure & Layout === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  color: #333;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+iframe {
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* === Typography === */
+h1 {
+  font-size: 2.5rem;
+  color: #d7263d;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #3f3d56;
+  border-bottom: 2px solid #ccc;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+p, li {
+  margin: 0.5rem 0;
+}
+
+ul, ol {
+  padding-left: 2rem;
+}
+
+/* === Navigation === */
+nav {
+  background: #6c63ff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffd166;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* === Footer === */
+footer {
+  background: #00bfa5;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* === Media === */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.inline-img {
+  vertical-align: middle;
+  height: 40px;
+}
+
+/* === Promote Box === */
+.promote {
+  background: #fff3cd;
+  border: 1px dashed #ffc107;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 1rem;
+}

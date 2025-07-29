@@ -1,0 +1,16 @@
+1. DOM Basics
+
+    The DOM is a tree structure of your HTML.
+    JavaScript can modify it (change text, styles, add/remove elements).
+
+Visualization:
+
+document (Root)
+└── html
+    ├── head
+    │   ├── title
+    │   └── meta
+    └── body
+        ├── h1
+        ├── p
+        └── div

@@ -1,0 +1,17 @@
+🔍 Introduction to DOM
+DOM Tree Structure Example
+html
+├── head
+│   ├── meta
+│   ├── title
+│   └── link
+└── body
+    ├── div
+    │   ├── h1
+    │   ├── div
+    │   ├── p
+    │   └── p
+    ... (repeats)
+Tools:
+•	Chrome: Right-click > Inspect
+•	Firefox: Tools > Web Developer > Inspector

@@ -1,0 +1,36 @@
+🖌️ CSS Basics
+3 Methods to Apply CSS
+<!-- Inline -->
+<p style="color:red;">Hello</p>
+
+<!-- Internal -->
+<style>
+  p { color: blue; }
+</style>
+
+<!-- External -->
+<link rel="stylesheet" href="styles.css">
+Selectors & Properties
+/* Element Selector */
+h1 { color: green; }
+
+/* Class Selector */
+.red { color: red; }
+<p class="red">Text</p>
+/* ID Selector */
+#mainTitle { font-size: 24px; }
+<h1 id="mainTitle">Welcome</h1>
+/* Grouped Selectors */
+p, div { font-weight: bold; }
+
+/* Universal */
+* { margin: 0; padding: 0; }
+Common Properties
+.left { text-align: left; }
+.underline { text-decoration: underline; }
+.upper { text-transform: uppercase; }
+.indent { text-indent: 20px; }
+.more-letter-spacing { letter-spacing: 5px; }
+.more-word-spacing { word-spacing: 10px; }
+.more-line-spacing { line-height: 150%; }
+________________________________________

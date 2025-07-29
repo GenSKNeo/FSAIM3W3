@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- External -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h1>Change Text on Click</h1>
+
+    <p id="demo">Click the button to change me.</p>
+    <button id="changeText">Change Text</button>
+
+</body>
+
+    <script>
+    document.getElementById("changeText").addEventListener("click", function() {
+        document.getElementById("demo").textContent = "Text changed!";
+    });
+    
+    </script>
+
+</html>

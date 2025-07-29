@@ -1,0 +1,28 @@
+4. Event Listeners (Interactivity)
+
+JavaScript can respond to user actions (clicks, keypresses, etc.).
+
+Example: Button Click Alert
+
+<button id="myBtn">Click Me</button>
+
+<script>
+  let btn = document.getElementById("myBtn");
+
+  btn.addEventListener("click", function() {
+    alert("Button clicked!");
+  });
+</script>
+
+Example: Toggle Dark Mode
+
+<button id="darkMode">Dark Mode</button>
+
+<script>
+  let darkBtn = document.getElementById("darkMode");
+
+  darkBtn.addEventListener("click", function() {
+    document.body.style.backgroundColor = "#333";
+    document.body.style.color = "white";
+  });
+</script>

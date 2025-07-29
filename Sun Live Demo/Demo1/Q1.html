@@ -1,0 +1,85 @@
+<!DOCTYPE html> <!-- Q1a: HTML5 Declaration -->
+<html lang="en"> <!-- Q1b: Correct use of html tag -->
+<head> <!-- Q1b: head section -->
+    <meta charset="UTF-8"> <!-- Q1c: Meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Q1c: For responsiveness -->
+    <meta name="description" content="My Learning Journal about HTML, CSS, DOM and JavaScript.">
+    <title>My Learning Journal – HTML, CSS, DOM & JavaScript</title> <!-- Q1c: Title tag -->
+
+    <!-- Q1c: Internal CSS Styling -->
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #007acc;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        ul {
+            list-style-type: square;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body> <!-- Q1b: body section -->
+
+    <!-- Q1d: Using heading, paragraph, image, list, link, iframe -->
+    <h1>Welcome to My Learning Journal</h1>
+    
+    <p>In this journal, I share my journey of learning HTML, CSS, DOM, and JavaScript. These are essential tools for building websites and web applications. I started with learning tags and elements like <strong>&lt;div&gt;</strong>, <strong>&lt;p&gt;</strong>, and <strong>&lt;img&gt;</strong>, then moved on to styling with CSS.</p>
+
+    <h2>HTML Elements I've Learned</h2>
+    <ul>
+        <li>Text Tags: <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;strong&gt;</code></li>
+        <li>Media Tags: <code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code></li>
+        <li>Layout Tags: <code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code></li>
+        <li>Form Inputs: <code>&lt;input type="text"&gt;</code>, <code>&lt;input type="email"&gt;</code>, <code>&lt;textarea&gt;</code></li>
+    </ul>
+
+    <p>Here's an image that inspires my learning:</p>
+    <img src="htmlimg.png" alt="Learning Inspiration" style="max-width:300px; max-height:200px;">
+
+    <p>Visit <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> to learn more about HTML and JavaScript.</p>
+
+    <h2>Embedded External Content</h2>
+    <p>Below is a useful YouTube video embedded using an <code>&lt;iframe&gt;</code>:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/UB1O30fR-EE" 
+            title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+
+    <!-- HTML5 Semantic Elements -->
+    <section>
+        <h2>My Favorite Input Types</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Learning Journal. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

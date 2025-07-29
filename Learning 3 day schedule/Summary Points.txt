@@ -1,0 +1,27 @@
+📄 Summary Points with Examples
+1. Basic HTML Structure
+<!DOCTYPE html>
+<html>
+  <head><title>Demo</title></head>
+  <body><h1>Title</h1></body>
+</html>
+2. Common Tags
+<h1>Heading</h1><p>Paragraph</p>
+<a href="#">Link</a><img src="img.jpg">
+<ul><li>Item</li></ul><table><tr><td>Data</td></tr></table>
+<div>Block</div><span>Inline</span>
+3. URLs
+<!-- Absolute -->
+<a href="https://example.com">Visit</a>
+<!-- Relative -->
+<a href="about.html">About</a>
+4. Forms
+<form action="/submit" method="post">
+  <input type="text" placeholder="Enter name">
+  <input type="submit">
+</form>
+5. CSS Application
+/* Inline: <p style="color: red;">Red Text</p> */
+/* Internal: <style>p { color: blue; }</style> */
+/* External: <link rel="stylesheet" href="style.css"> */
+________________________________________

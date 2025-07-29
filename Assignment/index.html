@@ -1,0 +1,119 @@
+<!-- Task 1.Basic HTML Structure (10 marks) -->
+
+<!DOCTYPE html> <!-- Q1a: HTML5 Declaration -->
+<html lang="en"> <!-- Q1b: Correct use of html tag -->
+<head> <!-- Q1b: head section -->
+    <meta charset="UTF-8"> <!-- Q1c: Meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Q1c: For responsiveness -->
+    <meta name="description" content="My Learning Journal about HTML, CSS, DOM and JavaScript.">
+    <title>My Learning Journal FSAI</title> <!-- Q1c: Title tag -->
+
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body> <!-- Q1b: body section -->
+
+    <!-- Q1d: Using heading, paragraph, image, list, link, iframe -->
+    <h1>Welcome to My Learning Journal</h1>
+
+    <p>In this journal, I share my journey of learning HTML, CSS, DOM, and JavaScript. 
+        These are essential tools for building websites and web applications. I started with 
+        learning tags and elements like <strong>div</strong>, <strong>p</strong>, and <strong>img</strong>, 
+        then moved on to styling with CSS.</p>
+
+    <h2>HTML Elements I've Learned</h2>
+    <ul>
+        <li>Text Tags: h1, p, strong</li>
+        <li>Media Tags: img, video, audio</li>
+        <li>Layout Tags: div, section, article</li>
+        <li>Form Inputs: input type="text", ;input type="email", textarea</li>
+    </ul>
+
+    <p>Here's an image that inspires my learning:</p>
+    <img src="mypic.png" alt="Learning Inspiration" style="max-width:300px; max-height:200px;">
+
+    <p>Visit <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> 
+        to learn more about HTML and JavaScript.</p>
+
+    <h2>Embedded External Content</h2>
+    <p>Below is a useful YouTube video embedded using an <code>&lt;iframe&gt;</code>:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/UB1O30fR-EE" 
+            title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+
+
+    <!-- Task 2.Usage of HTML Tags and Attributes -->
+    <hr>
+    <h1>My Learning Journal Using HTML Tags and Attributes</h1>
+
+    <!-- Q2a: Paragraph -->
+    <p>During this module, I explored several HTML tags and their attributes. 
+        These tags help structure content effectively, 
+        while attributes improve usability and accessibility.</p>
+
+    <!-- Q2a & Q2b: Link with href, target -->
+    <p>To dive deeper into web development, I often visit 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs</a>
+        for HTML references.
+    </p>
+
+    <!-- Q2a & Q2b: Image with src, alt -->
+    <p>Below is an image that motivates me to keep learning:</p>
+    <img src="htmlimg.png" alt="HTML and CSS Project">
+
+    <!-- Q2a: Unordered List -->
+    <h2>Tags I Have Practiced:</h2>
+    <ul>
+        <li>p Paragraph</li>
+        <li>a href="" Hyperlink</li>
+        <li>img src="" Image</li>
+        <li>ul, li Unordered List</li>
+        <li>ol Ordered List</li>
+    </ul>
+
+    <!-- Q2a: Ordered List -->
+    <h2>Steps to Create a Web Page:</h2>
+    <ol>
+        <li>Start with the <b> !DOCTYPE html</b> declaration</li>
+        <li>Use the <b>html</b>, <b>head</b>, and <b>body</b> structure</li>
+        <li>Add headings, <strong>text, images, and links</strong></li>
+        <li>Apply <b>CSS</b>CSS for styling</li>
+        <li>Use <strong>JavaScript</strong> to make it interactive</li>
+    </ol>
+
+    <!-- Q2b & Q2c: iframe with attributes properly quoted -->
+    <h2>Helpful Video</h2>
+    <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/kUMe1FH4CHE" 
+        title="Intro to HTML & CSS" 
+        frameborder="0" 
+        allowfullscreen>
+    </iframe>
+
+    <!-- Task 3.Incorporate JavaScript -->
+    <hr>
+    <h1>JavaScript in My Learning Journal</h1>
+    <p>JavaScript adds interactivity to web pages. For example, this page displays an 
+        <span class="highlight">alert</span> message when it loads, 
+        and logs a message to the browser's <code>console</code>.</p>
+
+    <h2>What I have Learned About JavaScript</h2>
+    <ul>
+        <li><strong>Script Placement</strong>: Scripts can go in the <b>head</b> or before the end of <b>body</b>.</li>
+        <li><strong>Console Log</strong>: Useful for debugging or messages using <code>console.log()</code>.</li>
+        <li><strong>Alert</strong>: Pops up messages using <code>alert()</code>.</li>
+        <li><strong>Functions</strong>: Blocks of code that perform tasks and can be reused.</li>
+    </ul>
+
+    <!-- Q3a: JavaScript placed in <head> section -->
+    <script>
+        // Q3b: Function displays a message when the page loads
+        window.onload = function() {
+            console.log("Welcome to My Learning Journal JavaScript has been loaded!");
+            alert("Hello! Thanks for visiting my Learning Journal");
+        };
+    </script>
+
+</body>
+</html>

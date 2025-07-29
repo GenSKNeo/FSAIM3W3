@@ -1,0 +1,46 @@
+/* General body styling from Q1, Q2, Q3 */
+body {
+    background-color: #f6faf7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+/* Heading colors from Q1 and Q3 */
+h1 {
+    color: #007acc;
+}
+h2 {
+    color: #00796b;
+}
+
+/* Image styling from Q1 and Q2 */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* List styles */
+ul {
+    list-style-type: square;
+}
+ol {
+    margin-left: 20px;
+}
+
+/* Link styling */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Highlighted JavaScript keyword from Q3 */
+.highlight {
+    color: #ff5722;
+    font-weight: bold;
+}

@@ -1,0 +1,51 @@
+✍️ HTML Fundamentals
+Structure of an HTML Document
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Web Page</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1>Hello World!</h1>
+</body>
+</html>
+Explanation:
+•	<!DOCTYPE html>: Declares HTML5
+•	<html>: Root element
+•	<head>: Metadata, title, links
+•	<body>: Visible content
+Common Tags with Examples
+•	Headings
+<h1>Main Heading</h1>
+<h2>Subheading</h2>
+•	Paragraphs and Formatting
+<p>This is a <b>bold</b>, <i>italic</i>, and <u>underlined</u> paragraph.</p>
+•	Lists
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+<ol>
+  <li>Step 1</li>
+  <li>Step 2</li>
+</ol>
+•	Links and Images
+<a href="https://www.google.com" target="_blank">Google</a>
+<img src="images/pic.jpg" alt="My Photo" width="200">
+•	Tables
+<table>
+  <tr><th>Name</th><th>Age</th></tr>
+  <tr><td>Alice</td><td>30</td></tr>
+</table>
+Absolute vs Relative URLs
+Use absolute URLs for external sites and relative URLs for linking internal pages and files.
+•	Absolute: https://example.com/img/photo.jpg
+•	Relative: img/photo.jpg
+<a href="project/about.html">About Us</a>
+<a href="../index.html">Go Back</a>
+Div vs Span
+<div style="border: 1px solid; padding: 10px;">Block Element</div>
+<p>Inline text with <span style="color:red;">highlight</span></p>
+•	div: Block-level element for layout
+•	span: Inline element for styling text fragments

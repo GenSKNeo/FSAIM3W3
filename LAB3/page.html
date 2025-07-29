@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Methods Demonstration</title>
+    
+    <!-- Internal Stylesheet -->
+    <style>
+        .internal-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 255, 0.5);
+            font-size: 24px;
+            color: navy;
+        }
+        
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: #f0f0f0;
+            margin: 20px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+    </style>
+    
+    <!-- External Stylesheet Link -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>CSS Implementation Methods</h1>
+    
+    <!-- Inline CSS Example -->
+    <div style="background-color: #ffe6e6; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+        <h2 style="color: #cc0000; text-shadow: 3px 3px 6px rgba(204,0,0,0.3);">Inline CSS</h2>
+        <p style="font-style: italic; color: #666;">
+            This text is styled using inline CSS directly in the HTML elements.
+        </p>
+    </div>
+    
+    <!-- Internal Stylesheet Example -->
+    <div class="box">
+        <h2 class="internal-shadow">Internal Stylesheet</h2>
+        <p>
+            This text is styled using CSS rules defined in the &lt;style&gt; section of the HTML document.
+        </p>
+    </div>
+    
+    <!-- External Stylesheet Example -->
+    <div class="external-box">
+        <h2 class="external-shadow">External Stylesheet</h2>
+        <p class="external-text">
+            This text is styled using CSS rules from an external .css file.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+⚙️ Day 5: DOM & JavaScript (Interactive Web Pages)
+
+The DOM (Document Object Model) is a programming interface for HTML. JavaScript manipulates it to create dynamic pages.
+1. DOM Basics
+
+    The DOM is a tree structure of your HTML.
+    JavaScript can modify it (change text, styles, add/remove elements).
+
+Visualization:
+
+document (Root)
+└── html
+    ├── head
+    │   ├── title
+    │   └── meta
+    └── body
+        ├── h1
+        ├── p
+        └── div
+
+2. Accessing DOM Elements
+Method 	Example 	Returns
+getElementById() 	document.getElementById("header") 	Single element
+querySelector() 	document.querySelector(".btn") 	First matching element
+querySelectorAll() 	document.querySelectorAll("p") 	All matching elements
+
+Example:
+
+// Get element by ID
+let header = document.getElementById("main-title");
+
+// Get first button with class="btn"
+let button = document.querySelector(".btn");
+
+// Get ALL paragraphs
+let paragraphs = document.querySelectorAll("p");
+
+3. Modifying DOM Elements
+Property/Method 	Example 	Effect
+.textContent 	header.textContent = "Hi!" 	Changes text
+.innerHTML 	div.innerHTML = "<strong>Warning!</strong>" 	Inserts HTML
+.style 	button.style.backgroundColor = "red" 	Changes CSS
+
+Example:
+
+// Change text
+header.textContent = "Welcome Back!";
+
+// Add HTML
+document.querySelector(".alert").innerHTML = "<em>New message!</em>";
+
+// Change CSS
+button.style.backgroundColor = "green";
+
+4. Event Listeners (Interactivity)
+
+JavaScript can respond to user actions (clicks, keypresses, etc.).
+
+Example: Button Click Alert
+
+<button id="myBtn">Click Me</button>
+
+<script>
+  let btn = document.getElementById("myBtn");
+
+  btn.addEventListener("click", function() {
+    alert("Button clicked!");
+  });
+</script>
+
+Example: Toggle Dark Mode
+
+<button id="darkMode">Dark Mode</button>
+
+<script>
+  let darkBtn = document.getElementById("darkMode");
+
+  darkBtn.addEventListener("click", function() {
+    document.body.style.backgroundColor = "#333";
+    document.body.style.color = "white";
+  });
+</script>
+
+🔧 Practice Exercises (DOM & JS)
+1. Change Text on Click
+
+<p id="demo">Click the button to change me.</p>
+<button id="changeText">Change Text</button>
+
+<script>
+  document.getElementById("changeText").addEventListener("click", function() {
+    document.getElementById("demo").textContent = "Text changed!";
+  });
+</script>
+
+2. Add New List Items
+
+<ul id="myList">
+  <li>Item 1</li>
+</ul>
+<button id="addItem">Add Item</button>
+
+<script>
+  let counter = 2;
+  document.getElementById("addItem").addEventListener("click", function() {
+    let newItem = document.createElement("li");
+    newItem.textContent = "Item " + counter++;
+    document.getElementById("myList").appendChild(newItem);
+  });
+</script>
+
+3. Form Input Display
+
+<input type="text" id="userInput" placeholder="Type something">
+<button id="showInput">Show Input</button>
+<p id="output"></p>
+
+<script>
+  document.getElementById("showInput").addEventListener("click", function() {
+    let userText = document.getElementById("userInput").value;
+    document.getElementById("output").textContent = "You typed: " + userText;
+  });
+</script>
+
+📌 Key Takeaways
+CSS Selectors
+
+    Use classes (.) for reusable styles.
+    Use IDs (#) for unique elements.
+    Combinators (, >, +) target specific relationships.
+
+DOM & JavaScript
+
+    querySelector() is the most flexible way to access elements.
+    .textContent changes text; .innerHTML allows HTML.
+    Event listeners (click, mouseover, etc.) make pages interactive.
+
+Next Steps:
+
+    Try the practice exercises.
+    Use DevTools (F12) to experiment with the DOM.
+    Ask questions if stuck! 😊

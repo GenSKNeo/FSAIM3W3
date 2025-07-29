@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Shadow Example</title>
+    <style>
+        .shadow-text {
+            text-shadow: -5px 4px 8px rgba(0,0,0,0.69);
+        }
+    </style>
+</head>
+<body>
+    <p class="shadow-text">Hello World with Internal Stylesheet</p>
+</body>
+</html>
+
+<!--
+    Internal Stylesheet:
+        CSS rules are defined within <style> tags in the document’s <head>
+        .shadow-text is a CSS class selector
+        Can be applied to multiple elements by adding the class="shadow-text" attribute
+
+    Advantages over Inline:
+        More maintainable (change once to affect all elements with the class)
+        Cleaner separation of structure (HTML) and presentation (CSS)
+        Can be reused across multiple elements
+ -->

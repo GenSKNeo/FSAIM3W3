@@ -1,0 +1,24 @@
+📌 Day 3: URLs & Forms
+1. Absolute vs. Relative URLs
+
+    Absolute: https://example.com/images/pic.jpg
+    Relative: images/pic.jpg (if file is in /images folder).
+
+2. HTML Forms
+
+<form action="/submit" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="[email protected]">
+
+    <input type="submit" value="Submit">
+</form>
+
+Key Attributes:
+
+    action: Where form data is sent.
+    method: GET (visible in URL) or POST (hidden).
+    required: Forces input before submission.
+

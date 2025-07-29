@@ -1,0 +1,24 @@
+✉️ HTML Forms
+Well-structured forms enhance user experience and accessibility. Use appropriate input types and validation attributes.
+Basic Form Structure
+<form action="submit.php" method="post">
+  <label for="name">Name:</label>
+  <input type="text" id="name" placeholder="John Doe" required>
+  <input type="submit" value="Submit">
+</form>
+•	action: Target URL for form submission
+•	method: HTTP method (GET or POST)
+Input Types
+<input type="text">
+<input type="password">
+<input type="email">
+<input type="file">
+<input type="date">
+<input type="color">
+<input type="checkbox">
+<input type="radio">
+<input type="submit">
+<input type="reset">
+Validation Attributes
+<input type="text" placeholder="Name" required minlength="2" maxlength="50">
+<input type="number" min="1" max="100">

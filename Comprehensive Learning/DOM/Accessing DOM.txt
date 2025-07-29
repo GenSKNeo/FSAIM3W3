@@ -1,0 +1,16 @@
+2. Accessing DOM Elements
+Method 	            Example 	                        Returns
+getElementById() 	document.getElementById("header") 	Single element
+querySelector() 	document.querySelector(".btn") 	    First matching element
+querySelectorAll() 	document.querySelectorAll("p") 	    All matching elements
+
+Example:
+
+// Get element by ID
+let header = document.getElementById("main-title");
+
+// Get first button with class="btn"
+let button = document.querySelector(".btn");
+
+// Get ALL paragraphs
+let paragraphs = document.querySelectorAll("p");

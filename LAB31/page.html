@@ -1,0 +1,56 @@
+<!DOCTYPE html>  <!-- Type ! Basic HTML Skeleton -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Task 4: Creating a Hyperlink -->
+    <a href="https://www.google.com"> Google (open in same tab)</a>
+    <br>
+
+    <br>
+    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google (opens in new tab)</a>
+
+    <!-- 
+    1. When you click on it, does the current tab/window go to Google or open up a new tab/window?
+        By default (without target="_blank"), the link opens in the same tab/window.
+        With target="_blank", it opens in a new tab/window.
+
+    2. What is the difference in the codes that will determine whether it is opening up in a new window or the existing window?
+        The target attribute determines this behavior:
+            No target attribute or target="_self" opens in the same tab/window
+            target="_blank" opens in a new tab/window 
+    -->
+
+    <!-- Task 5: Linking To An Image -->
+     <h2>Absolute URL Image</h2>
+    <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/082012/singapore_lion.png?itok=sKZ2FAY3" alt="W3Schools logo">
+
+    <h2>Relative URL Image</h2>
+    <img src="pagehtml.png" alt="Local image">
+
+<!--
+
+    1. Do you know how to link to an absolute URL?
+        Yes, an absolute URL includes the full path to the resource, including the protocol (https://) and domain name. Example:
+
+        <img src="https://www.myserver.com/images/profile.jpg" alt="Profile">
+
+    2. How about a relative URL?
+        A relative URL specifies the path relative to the current page’s location. Example:
+
+        <img src="images/profile.jpg" alt="Profile">
+
+        This would look for the image in an “images” folder that’s in the same directory as the HTML file.
+
+    3. How does the relative URL work?
+        Relative URLs work by building the path from the current document’s location:
+            "image.jpg" looks in the same directory as the HTML file
+            "images/image.jpg" looks in an “images” subdirectory
+            "../image.jpg" looks in the parent directory (one level up)
+            "../../image.jpg" looks two levels up, and so on
+    -->
+</body>
+</html>

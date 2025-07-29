@@ -1,0 +1,16 @@
+3. Modifying DOM Elements
+Property/Method 	Example 	                                    Effect
+.textContent 	    header.textContent = "Hi!" 	                    Changes text
+.innerHTML 	        div.innerHTML = "<strong>Warning!</strong>" 	Inserts HTML
+.style 	            button.style.backgroundColor = "red" 	        Changes CSS
+
+Example:
+
+// Change text
+header.textContent = "Welcome Back!";
+
+// Add HTML
+document.querySelector(".alert").innerHTML = "<em>New message!</em>";
+
+// Change CSS
+button.style.backgroundColor = "green";

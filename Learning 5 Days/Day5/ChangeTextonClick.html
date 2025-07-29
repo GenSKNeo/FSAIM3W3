@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Click the button to change me.</p>
+    <button id="changeText">Change Text</button>
+</body>
+
+<ul id="myList">
+  <li>Item 1</li>
+</ul>
+
+<button id="addItem">Add Item</button>
+
+<br><br>
+
+<input type="text" id="userInput" placeholder="Type something">
+<button id="showInput">Show Input</button>
+<p id="output"></p>
+
+<script>
+  document.getElementById("changeText").addEventListener("click", function() {
+    document.getElementById("demo").textContent = "Text changed!";
+  });
+</script>
+
+<script>
+  let counter = 2;
+  document.getElementById("addItem").addEventListener("click", function() {
+    let newItem = document.createElement("li");
+    newItem.textContent = "Item " + counter++;
+    document.getElementById("myList").appendChild(newItem);
+  });
+</script>
+
+<script>
+  document.getElementById("showInput").addEventListener("click", function() {
+    let userText = document.getElementById("userInput").value;
+    document.getElementById("output").textContent = "You typed: " + userText;
+  });
+</script>
+
+</html>

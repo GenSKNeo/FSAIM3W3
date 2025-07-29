@@ -1,0 +1,71 @@
+1. Basic Selectors
+
+Selector Type 	Example         Targets
+Element 	    p { } 	        All <p> tags
+Class 	        .intro { } 	    Elements with class="intro"
+ID 	            #header { } 	The element with id="header"
+
+Example:
+
+/* Element selector */
+h1 {
+  color: blue;
+}
+
+/* Class selector */
+.highlight {
+  background: yellow;
+}
+
+/* ID selector */
+#main-title {
+  font-size: 2rem;
+}
+
+2. Combinator Selectors
+Selector 	            Example 	    Targets
+Descendant 	            div p { } 	    All <p> inside <div>
+Child (>) 	            ul > li { } 	Direct <li> children of <ul>
+Adjacent Sibling (+) 	h2 + p { } 	    <p> immediately after <h2>
+
+Example:
+
+/* Descendant */
+article p {
+  font-style: italic;
+}
+
+/* Child */
+nav > ul {
+  list-style: none;
+}
+
+/* Adjacent Sibling */
+h2 + p {
+  margin-top: 0;
+}
+
+3. Pseudo-Classes & Pseudo-Elements
+Type 	        Example 	                    Effect
+:hover 	        a:hover { } 	                Styles on mouse hover
+:nth-child() 	li:nth-child(odd) { } 	        Targets every odd <li>
+::before 	    p::before { content: "→" } 	    Inserts content before <p>
+
+Example:
+
+/* Hover effect */
+button:hover {
+  background: black;
+  color: white;
+}
+
+/* Zebra-striped list */
+li:nth-child(even) {
+  background: #f0f0f0;
+}
+
+/* Add an arrow before paragraphs */
+p::before {
+  content: "→ ";
+  color: red;
+}

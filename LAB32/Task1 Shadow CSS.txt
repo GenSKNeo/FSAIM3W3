@@ -1,0 +1,5 @@
+Task 1: Text Shadow CSS Generator (Inline)
+
+1. Visit https://cssgenerator.org/text-shadow-css-generator.html
+2. Play around with the settings on the page and generate a text shadow effect of your
+choice
